@@ -1,0 +1,21 @@
+* {
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+#sign-up-name {
+  width: 100%;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.form-container {
+  width: 40.5em;
+}
+
+.errors-list {
+  color: red;
+}
