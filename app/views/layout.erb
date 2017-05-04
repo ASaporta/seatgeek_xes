@@ -25,7 +25,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">SeatGeek Cross-Event Search</a>
+            <a class="navbar-brand" href="/">SeatGeek Cross-Event Search</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +50,7 @@
                 </ul>
               </li>
               <% else %>
-                <li class="active" data-toggle="modal" data-target="#myModal"><a href="#">Sign Up <span class="sr-only">(current)</span></a></li>
+                <li class="active" data-toggle="modal" data-target="#myModal"><a href="/users/new">Sign Up <span class="sr-only">(current)</span></a></li>
 
                 <!-- Sign Up Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -61,31 +61,7 @@
                         <h4 class="modal-title" id="myModalLabel">Sign up for Cross-Event Search</h4>
                       </div>
                       <div class="modal-body">
-                        <form>
-                          <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="Email address">
-                          </div>
-                          <div class="form-group">
-                            <table id="sign-up-name">
-                              <tr>
-                                <td>
-                                  <div id="first-name-input">
-                                    <input type="text" class="form-control" id="first-name-text" placeholder="First name">
-                                  </div>
-                                </td>
-                                <td>
-                                  <div id="last-name-input">
-                                    <input type="text" class="form-control" id="first-name-text" placeholder="Last name">
-                                  </div>
-                                </td>
-                              </tr>
-                            </table>
-                          </div>
-                          <div class="form-group">
-                            <input type="password" class="form-control" id="password" placeholder="Password">
-                          </div>
-                          <button type="submit" class="btn btn-primary">Sign up</button>
-                        </form>
+                        <%= erb :_signup_form %>
                       </div>
                     </div>
                   </div>
