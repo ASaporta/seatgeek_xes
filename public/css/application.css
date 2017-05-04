@@ -11,3 +11,11 @@
 .form-control {
   border-radius: 0;
 }
+
+.form-container {
+  width: 40.5em;
+}
+
+.errors-list {
+  color: red;
+}
