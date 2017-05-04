@@ -10,7 +10,7 @@ post '/users' do
   else
     status 422
     @errors = new_user.errors.full_messages
-    erb :_errors, { layout: false }
+    erb :'/partials/_errors', { layout: false }
   end
 end
 
