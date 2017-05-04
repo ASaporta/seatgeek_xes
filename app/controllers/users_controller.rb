@@ -4,16 +4,13 @@ end
 
 post '/users' do
   new_user = User.create(params[:user])
-  if request.xhr?
-
+  if new_user.valid?
+    session[:user_id] = new_user.id
+    status 200
   else
-    if new_user.valid?
-      session[:user_id] = new_user.id
-      redirect '/'
-    else
-      @errors = new_user.errors.full_messages
-      erb :'/users/new'
-    end
+    status 422
+    @errors = new_user.errors.full_messages
+    erb :_errors, { layout: false }
   end
 end
 
