@@ -40,7 +40,7 @@
             <ul class="nav navbar-nav navbar-right">
               <% if logged_in? %>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TK Username <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.first_name %> <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -49,24 +49,11 @@
                   </ul>
                 </li>
               <% else %>
-                <li class="active" data-toggle="modal" data-target="#myModal"><a href="#">Sign Up <span class="sr-only">(current)</span></a></li>
+                <li class="active" data-toggle="modal" data-target="#signupModal"><a href="#">Sign Up <span class="sr-only">(current)</span></a></li>
+                <%= erb :'/partials/_signup_modal' %>
 
-                <!-- Sign Up Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Sign up for Cross-Event Search</h4>
-                      </div>
-                      <div class="modal-body">
-                        <%= erb :_signup_form %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <li><a href="#">Log In</a></li>
+                <li data-toggle="modal" data-target="#loginModal"><a href="#">Log In <span class="sr-only">(current)</span></a></li>
+                <%= erb :'/partials/_login_modal' %>
               <% end %>
 
             </ul>
