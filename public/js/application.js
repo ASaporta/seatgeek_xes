@@ -41,8 +41,14 @@ $(document).ready(function() {
   // Navbar search submission
   $("#nav-bar-search").submit(function(event) {
     event.preventDefault();
+    var searched_performer = $("#nav-bar-search-input").val()
+    var url = '/performers/' + searched_performer
 
-    
+    $.ajax({
+      url: url,
+      method: "GET"
+    });
+
   });
 
 });
