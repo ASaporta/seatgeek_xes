@@ -1,0 +1,11 @@
+<% CLIENT_ID = "MjYxNDUxNXwxNDkzOTA5MTg3Ljkx" %>
+
+<% json_string_response = open("https://api.seatgeek.com/2/events/?client_id=" + CLIENT_ID + "&performers.id=3").read %>
+
+<% ruby_hash_response = JSON.parse(json_string_response)%>
+
+<ul class="event-list">
+  <% ruby_hash_response["events"].each do |event| %>
+    <li><%= event["short_title"] %></li>
+  <% end %>
+</ul>
