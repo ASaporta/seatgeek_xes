@@ -4,6 +4,7 @@
         box-sizing: border-box;
 }
 
+/* User Sign Up */
 #sign-up-name {
   width: 100%;
 }
@@ -18,4 +19,9 @@
 
 .errors-list {
   color: red;
+}
+
+/* Performer Events Page */
+.event-list {
+  list-style-type: none;
 }
