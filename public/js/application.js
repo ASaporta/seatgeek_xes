@@ -47,8 +47,10 @@ $(document).ready(function() {
     $.ajax({
       url: url,
       method: "GET"
-    });
-
+    })
+    .done(function(response) {
+      console.log(response)
+    })
   });
 
 });

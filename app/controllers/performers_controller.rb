@@ -1,5 +1,9 @@
 get '/performers/:query' do
-  puts params[:query]
+  CLIENT_ID = "MjYxNDUxNXwxNDkzOTA5MTg3Ljkx"
+  json_string_response = open("https://api.seatgeek.com/2/events/?client_id=" + CLIENT_ID + "&performers.id=3").read
+  ruby_hash_response = JSON.parse(json_string_response)
+  @events = ruby_hash_response["events"]
+  erb :'/performers/show', layout: false
 end
 
 # TO DO:
