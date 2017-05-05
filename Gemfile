@@ -15,3 +15,4 @@ gem 'rake'
 gem 'shotgun', '~>0.9.1'
 
 gem 'bcrypt'
+gem 'json'
