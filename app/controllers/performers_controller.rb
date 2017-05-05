@@ -8,6 +8,7 @@ end
 
 # TO DO:
 # - create a performer model pulled from SG api
+# - move to heroku
 # - move code to your controller and to the model
 # - make search work
 # - move CLIENT_ID and hide it
